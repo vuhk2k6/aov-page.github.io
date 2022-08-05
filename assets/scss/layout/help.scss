@@ -1,0 +1,134 @@
+.help-section {
+    background-image: linear-gradient(to right bottom,
+    $color-primary-light,
+    $color-primary-dark);
+    padding: 5rem 0;
+}
+
+.help-form {
+    background-image: radial-gradient(150% 200% at -15%,
+    rgba($color-white, .8) 50%, transparent 50%),
+    url(../img/about3.png);
+    background-size: cover;
+    box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: .2);
+    height: 50rem;
+    border-radius: 5rem;
+}
+
+.form {
+    padding: 4rem;
+
+    &__heading {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 3.2rem;
+        text-align: left;
+        text-transform: uppercase;
+        margin-bottom: 3rem;
+        letter-spacing: 8px;
+        cursor: pointer;
+        color: transparent;
+        user-select: none;
+        -webkit-background-clip: text;
+        background-image: linear-gradient( to right, rgb($color-primary-light, 0.7), rgb($color-primary-dark, 1.4));
+        transition: all 0.25s;
+
+        &:hover {
+            transform: skewY(1deg) scale(1.05);
+        text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.3);
+        }
+    }
+
+    &__group {
+        position: relative;
+
+        &-input {
+            outline: none;
+            border: 0;
+            height: 3.1rem;
+            border-radius: .2rem;
+            padding: 8px;
+            font-size: 1.5rem;
+            width: 45%;
+            margin-bottom: 2rem;
+            background-color: rgba($color-white, .5);
+            
+            &:focus {
+                box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+                border-bottom: 3px solid $color-primary;
+            }
+
+            &:focus:invalid {
+                border-bottom: 3px solid $color-second-dark;
+            }
+        }
+        &-input:not(:placeholder-shown) + &-label,
+        &-input:focus + &-label {
+            top: -1.5rem;
+            font-size: 1.2rem;
+            left: 1px;
+        }
+
+        &-label {
+            position: absolute;
+            font-size: 1.5rem;
+            left: 8px;
+            top: 8px;
+            color: $color-grey;
+            transition: all .25s;
+        }
+    }
+
+    &__radio {
+        &-input {
+            display: none;
+        }
+
+        &-input:checked ~ &-label &-btn::after {
+            opacity: 1;
+        }
+
+        &-group{
+            margin-bottom: 24px;
+            width: 15%;
+            display: inline-block;
+        }
+
+        &-label {
+            font-size: 1.6rem;
+            cursor: pointer;
+            padding-left: 2.5rem;
+            position: relative;
+            user-select: none;
+        }
+
+        &-btn {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 1.6rem;
+            height: 1.6rem;
+            border: 2px solid $color-primary;
+            border-radius: 10rem;
+
+            &::after {
+                content: "";
+                opacity: 0;
+                display: block;
+                position: absolute;
+                width: .8rem;
+                height: .8rem;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background-color: $color-primary;
+            }
+        }
+    }
+
+    & .btn {
+        width: 110px;
+    }
+}
+

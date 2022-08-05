@@ -1,0 +1,14 @@
+{
+  "name": "practice-1",
+  "version": "1.0.0",
+  "description": "3",
+  "main": "index.js",
+  "scripts": {
+    "sasstocss": "node-sass sass/main.sass to css/main.css -w"
+  },
+  "author": "vu",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

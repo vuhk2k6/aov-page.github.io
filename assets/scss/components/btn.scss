@@ -1,0 +1,118 @@
+.menu-btn {
+    background-color: $color-white;
+    color: $color-grey;
+    position: fixed;
+    z-index: 100;
+    right: 12px;
+    top: 12px;
+    outline: none;
+    border: 0;
+    width: 5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2rem 4rem rgb($color-black, .5);
+
+    &-icon {
+        font-size: 2.2rem;
+        padding: 14px;
+    }
+}
+
+.btn {
+    &-link {
+        display: block;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        padding: 12px 36px;
+        text-decoration: none;
+        color: $color-grey;
+    }
+    &--white{
+        background-color: $color-white;
+        
+        .btn-link {
+            color: $color-grey;
+        }
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    &--blue {
+        background-color: $color-primary;
+        
+        .btn-link {
+            color: $color-white;
+        }
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+}
+.btn,
+.btn:link,
+.btn:visited {
+    border-radius: 100px;
+    outline: none;
+    border: 0;
+    position: relative;
+    animation: btnFadeIn linear 0.75s 0.75s;
+    animation-fill-mode: backwards;
+    transition: transform linear 0.25s;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 100px;
+    transition: all .4s;
+    z-index: -1;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-more {
+    transition: all 0.25s;
+
+    &:link,
+    &:visited {
+        color: $color-primary;
+        font-size: 1.5rem;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: 8px 0;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        transform: translateY(-2px);
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgb($color-black, 0.2);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 .5rem 1rem rgb($color-black, 0.2);
+    }
+}

@@ -1,0 +1,181 @@
+.skin-section {
+    margin-bottom: 72px;
+}
+
+.skin-section .col {
+    padding: 0 24px;
+}
+
+
+.skin {
+    perspective: 150rem;
+    position: relative;
+    height: 35rem;
+    margin-bottom: 30px;
+
+    &__side {
+        color: #fff;
+        font-size: 2rem;
+        height: 31rem;
+        transition: all 1s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 4rem;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgb($color-black, .3);
+
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            background-color: greenyellow;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right, 
+                rgba($color-primary-light, .8), 
+                rgba($color-primary-dark, .8))
+            }
+            &-2 {
+                background-image: linear-gradient(to right, 
+                rgba($color-second-light, .6), 
+                rgba($color-second-dark, .8))
+            }
+            &-3 {
+                background-image: linear-gradient(to right, 
+                rgba($color-tertiary-light, .6), 
+                rgba($color-tertiary-dark, .8))
+            }
+        }
+
+        &-picture {
+            background-blend-mode: screen;
+            width: 100%;
+            height: 16rem;
+            clip-path: ellipse(80% 70% at 50% 30%);
+
+            &--1 {
+                background-image: linear-gradient(to right, 
+                rgba($color-primary-light, .3), 
+                rgba($color-primary-dark, .3)), 
+                url('../img/skin1.jpg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right, 
+                rgba($color-second-light, .2), 
+                rgba($color-second-dark, .2)), 
+                url('../img/skin2.jpg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right, 
+                rgba($color-tertiary-light, .3), 
+                rgba($color-tertiary-dark, .3)),
+                url('../img/skin3.jpg');
+                background-size: 100%;
+                background-repeat: no-repeat;
+                position: relative;
+            }
+        }
+    }
+
+    &__price {
+        &-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+        &-heading {
+            font-size: 1.4rem;
+            line-height: 2.6rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            user-select: none;
+        }
+        &-number {
+            font-size: 7rem;
+            line-height: 7rem;
+            font-weight: 300;
+            margin-bottom: 64px;
+            user-select: none;
+        }
+    }
+
+    &__heading {
+        font-size: 1.8rem;
+        color: $color-white;
+        line-height: 1.8rem;
+        position: absolute;
+        bottom: 2rem;
+        right: .5rem;
+        text-align: end;
+
+        &-span {
+            line-height: 4rem;
+
+            &--1 span {
+                background-image: linear-gradient(to right bottom, 
+                rgba($color-primary-light, .8), 
+                rgba($color-primary-dark, .8));
+            }
+            &--2 span {
+                background-image: linear-gradient(to right, 
+                rgba($color-second-light, .8), 
+                rgba($color-second-dark, .8));
+            }
+            &--3 span {
+                background-image: linear-gradient(to right, 
+                rgba($color-tertiary-light, .8), 
+                rgba($color-tertiary-dark, .8));
+            }
+
+            & span {
+                padding: 6px 12px;
+                border-radius: 10rem;
+            }
+        }
+    }
+
+    &__details {
+        padding: 2rem 4rem;
+        color: $color-grey;
+        font-size: 1.6rem;
+
+        & ul {
+            list-style: none;
+
+            & li {
+                text-align: center;
+                padding: 12px 0;
+                border-bottom: 0;
+            }
+
+            & li:not(:last-child) {
+                border-bottom: 1px solid #dbdbdb;
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}

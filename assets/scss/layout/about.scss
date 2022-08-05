@@ -1,0 +1,46 @@
+.about__container {
+    margin-bottom: 100px;
+}
+
+.about-left {
+    padding-right: 48px;
+}
+
+.about-right  {
+    position: relative;
+}
+
+.about__container-img {
+    width: 55%;
+    box-shadow: 0 1.5rem 4rem rgb($color-black, 0.4);
+    position: absolute;
+    z-index: 10;
+    transition: all .2s;
+
+    &--1 {
+        left: 1rem;
+        top: -1rem;
+    }
+
+    &--2 {
+        right: 0;
+        top: 4rem;
+    }
+
+    &--3 {
+        left: 15%;
+        top: 12rem;
+    }
+
+    &:hover &:not(:hover) {
+        transform: scale(.8);
+    }
+
+    &:hover {
+        transform: scale(1.2);
+        outline-offset: 10px;
+        z-index: 20;
+        outline: 1rem solid $color-primary;
+    }
+}
+

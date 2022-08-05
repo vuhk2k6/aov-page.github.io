@@ -1,0 +1,12 @@
+/* header */
+.header {
+    background-image: linear-gradient(to right bottom, rgba(142, 158, 252, .7), rgba(28, 62, 255, .7)), 
+    url('../img/header-img.jpg');
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    -webkit-clip-path: ellipse(73% 67% at 50% 33%);
+    clip-path: ellipse(73% 67% at 50% 33%);
+}

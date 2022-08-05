@@ -1,0 +1,55 @@
+.skills-section {
+    background-image: linear-gradient(to right bottom, 
+    rgba($color-primary-light, 0.8), 
+    rgba($color-primary-dark, 0.8)), 
+    url("../img/header-img.jpg");
+    background-size: cover;
+    position: relative;
+    padding: 10rem 0;
+    clip-path: ellipse(70% 50% at 50% 50%);
+}
+
+.skills-section .row {
+    margin-left: -18px;
+    margin-right: -18px;
+}
+
+.skills-container {
+    padding: 18px;
+}
+
+.skill-box {
+    background-color: rgba($color: $color-white, $alpha: .8);
+    text-align: center;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+    border-radius: 4rem;
+    box-shadow: 0 1.5rem 4rem rgba($color: $color-black, $alpha: .2);
+    transition: all 0.2s;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.05);
+    }
+
+    &__img {
+        width: 6rem;
+        margin-bottom: 1.2rem;
+        display: inline-block;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: #757575;
+        margin-bottom: 1.6rem;
+    }
+
+    &__content {
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        color: #646464;
+        min-height: 7.2rem;
+    }
+}
+
